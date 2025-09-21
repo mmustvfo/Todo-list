@@ -51,6 +51,7 @@ extension MainScreenPresenter: MainScreenPresenterProtocol {
             fetchDataFromNetwork()
         } else {
             allRowDescriptors = userStorage.todos
+            fetchedRowDesctiptors = Array(allRowDescriptors.prefix(pageSize))
             view?.reload()
         }
     }
